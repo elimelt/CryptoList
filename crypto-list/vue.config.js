@@ -1,6 +1,11 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-   publicPath: '/CryptoList/'
+   
     
 })
+
+module.exports = {
+  publicPath: '/CryptoList/',
+  outputDir: "dist",
+}
