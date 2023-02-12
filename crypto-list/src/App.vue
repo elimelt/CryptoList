@@ -1,7 +1,8 @@
 <template>
   <body v-bind:class="{ 'dark-mode': isDark }">
     <div id="app">
-      <SettingsPopup v-if="showSettings" @closeSettings="closeSettings"/>
+      <h1 class="title-heading">Crypto List</h1>
+      <SettingsPopup isDark="isDark" v-if="showSettings" @closeSettings="closeSettings" />
       <div class="header">
         <button class="header-button" @click="toggleSettings">Settings</button>
       </div>
@@ -46,19 +47,34 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #6b7f94;
+  color: #cca436;
   font-weight: 500;
   margin-top: 60px;
 }
 
+.title-heading {
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #ad6b09, #1600e0);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
 .header {
-  background-color: #ccc;
+  background-color: #b97816f3;
   height: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -75,7 +91,8 @@ export default {
   color: #333;
 }
 
-body.dark {
+body.dark-mode {
   background-color: #001;
 }
 </style>
+
